@@ -10,9 +10,9 @@ metadata:
     Security Deposit Letter
   description: |-
     This interview guides Minnesotans in creating a security deposit demand letter.
-  tags:
-    - "HO-06-00-00-00"
-    - "MO-10-00-00-00"
+#  tags:
+#    - "HO-06-00-00-00"
+#    - "MO-10-00-00-00"
   authors:
     - name: Devin Webster
       organization: Suffolk University Law School
@@ -36,6 +36,9 @@ code: |
   AL_DEFAULT_STATE = "MN"
 ---
 code: |
+  AL_ORGANIZATION_TITLE = "LawHelpMN"
+---
+code: |
   github_repo_name =  'docassemble-SecurityDepositDemandLetter'
 ---
 code: |
@@ -47,6 +50,7 @@ code: |
 objects:
   - users: ALPeopleList.using(ask_number=True,target_number=1)
   - other_parties: ALPeopleList.using(ask_number=True,target_number=1)
+  - al_logo: DAStaticFile.using(filename="MNfavicon-96x96.png", alt_text="LawHelpMN")
 ---
 sections:
   - review_security_deposit_demand_letter: Review your answers
